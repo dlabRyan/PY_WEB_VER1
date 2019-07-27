@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load staticfiles %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        
+        <link href="https://fonts.googleapis.com/css?family=DM+Sans|Nanum+Gothic&display=swap" rel="stylesheet">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <style>
+            .bg-1{
+                background-color: rgb(26, 188, 156);
+                color: white;
+            }
+            .bg-2{
+                background-color: rgb(71, 78, 93);
+                color: white;
+            }
+            .bg-3{
+                background-color: white;
+                color: rgb(85, 85, 85);
+            }
+            .container-fluid{
+                padding-top: 70px;
+                padding-bottom: 70px;
+            }
+            .bg-4{
+                background-color: rgb(85, 85, 85);
+            }
+            .link{
+                text-decoration: none;
+                color: orangered;
+            }
+            .link:hover{
+                text-decoration: none;
+                color: white;
+            }
+            body{
+                font-family: 'DM Sans', sans-serif;
+                font-size: 20px;
+                line-height: 1.8;
+            }
+            p{
+                font-size: 16px;
+            }
+            #myNavbar{
+                font-size: 14px;
+            }
+            .kor{
+                font-family: 'Nanum Gothic', sans-serif;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" 
+                            data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Ryan.Ahn</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{% url 'admin:index' %}">ADMIN </a></li>
+                        <li><a href="#">SIGN UP </a></li>
+                        <li><a href="#">SIGN IN </a></li>
+                        <li><a href="#">SIGN OUT </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid bg-1 text-center">
+            <h3>DLAB WEB SERVICE MAKER</h3>
+            <img src="{% static 'img/whale.jpg' %}" alt="Whale" width="250px" height="250px" class="img-circle">
+            <h3>HTML &amp; CSS &amp; PYTHON &amp; DJANGO PROJECT</h3>
+        </div>
+        <div class="container-fluid bg-2 text-center">
+            <h3>INTRODUCE PROJECT</h3>
+            <p>Lorem..... ipsum...</p>
+            <a href="#" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-search"></span>Search</a>
+        </div>
+        <div class="container-fluid bg-3 text-center">
+            <h3>WEB SERVICE PROJECT</h3>
+            <p class="kor">Python 과 HTML/CSS 그리고 Bootstrap을 활용한 프로젝트</p>
+            <div class="row">
+                <div class="col-sm-4">
+                    <p>Lorem ipsum</p>
+                    <img src="{% static 'img/white-tiger-1X1.jpg' %}" alt="white_tiger"
+                         class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-sm-4">
+                    <p>Favorite YouTube List</p>
+                    <a href="{% url 'index' %}" target="_blank">
+                    <img src="{% static 'img/youtube.png' %}" alt="whale-shark"
+                         class="img-responsive" style="width: 100%">
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <p>Blog made with django</p>
+                    <a href="{% url 'blog:post_list' %}" target="_blank">
+                        <img src="{% static 'img/beluga-whale.jpg' %}" alt="beluga"
+                             class="img-responsive" style="width: 100%">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-3 text-center">
+            <h3>PYTHON PROJECT</h3>
+            <p>Lorem..... ipsum...</p>
+            <div class="row">
+                <div class="col-sm-4">
+                    <p>Lorem ipsum</p>
+                    <img src="{% static 'img/white-tiger-1X1.jpg' %}" alt="white_tiger"
+                         class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-sm-4">
+                    <p>Lorem ipsum</p>
+                    <img src="{% static 'img/whale-shark.jpg' %}" alt="whale-shark"
+                         class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-sm-4">
+                    <p>Lorem ipsum</p>
+                    <img src="{% static 'img/beluga-whale.jpg' %}" alt="beluga"
+                         class="img-responsive" style="width: 100%">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-3 text-center">
+            <h3>ARDUINO PROJECT</h3>
+            <p>Lorem..... ipsum...</p>
+            <div class="row">
+                <div class="col-sm-4">
+                    <p>Lorem ipsum</p>
+                    <img src="{% static 'img/white-tiger-1X1.jpg' %}" alt="white_tiger"
+                         class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-sm-4">
+                    <p>Lorem ipsum</p>
+                    <img src="{% static 'img/whale-shark.jpg' %}" alt="whale-shark"
+                         class="img-responsive" style="width: 100%">
+                </div>
+                <div class="col-sm-4">
+                    <p>Lorem ipsum</p>
+                    <img src="{% static 'img/beluga-whale.jpg' %}" alt="beluga"
+                         class="img-responsive" style="width: 100%">
+                </div>
+            </div>
+        </div>
+        <footer class="container-fluid bg-4 text-center">
+            <p>Bootstrap Design Made By <a class="link" href="http://www.daddyslab.com/" target="_blank"><b>DLAB</b></a></p>
+        </footer>
+    </body>
+</html>

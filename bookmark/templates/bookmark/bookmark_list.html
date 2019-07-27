@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bookmark list</title>
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans|Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+
+        #content{
+            width:900px; height:900px;
+            margin: auto;
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        ul{
+            list-style: none;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        li{
+            width:500px;
+            margin: auto;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        a{
+            text-decoration: none;
+            color: dimgray;
+        }
+        h1{
+            font-family: 'DM Sans', sans-serif;
+        }
+        #title{
+            font-size: 100px;
+            color: red;
+        }
+        .small{
+            font-size: 40px;
+            color: dimgray;
+        }
+        li:hover{
+            background-color: rgba(255, 20, 147, 0.1);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1 id="title">
+            F<span class="small">avorite</span>
+            Y<span class="small">ouTube</span>
+            L<span class="small">ist</span>
+        </h1>
+
+        <ul>
+            {% for bookmark in object_list %}
+            <li><a href="{% url 'detail' bookmark.id %}">{{ bookmark }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
